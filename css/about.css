@@ -1,0 +1,39 @@
+.aboutdiv{
+position: relative;
+overflow: hidden;
+height: 100vh;
+}
+
+.aboutdiv::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/macbook.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    
+}
+
+.content{
+    position: relative;
+    padding: 20px;
+    color: #fff;
+}
+
+.aboutdiv h1{
+    text-align: center;
+    padding: 50px 0;
+    font-size: 60px;
+    color: #FFBD38;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aboutdiv p{
+    text-align: center;
+    color: #fff;
+}
