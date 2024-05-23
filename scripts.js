@@ -147,3 +147,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const boxes = document.querySelectorAll('.resume-container .box');
+    boxes.forEach(box => {
+        box.addEventListener('click', () => {
+            box.classList.toggle('hidden');
+        });
+    });
+});
+
+
+
+

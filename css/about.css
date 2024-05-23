@@ -3,36 +3,30 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000; /* Background color for the container */
-}
-
-.about-me {
     width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    text-align: center;
+    background-color: #000; 
 }
 
 .about-me h2 {
     font-size: 50px;
-    color: #FFBD38;
+    color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: -90px 0 90px 90px;
+    margin: 50px 0 60px 90px;
 }
 
 .aboutdiv {
     display: flex;
-    align-items: flex-start; /* Align items to the start to move the description div higher */
-    justify-content: center;
+    justify-content: space-between;
     text-align: left;
-    margin-top: -20px; /* Adjust margin to move the content higher */
+    margin-top: -20px; 
 }
 
 .aboutdiv img {
-    width: 450px;
+    width: 350px;
     height: auto;
     border-radius: 20px;
     margin-right: 20px;
+    right: 0;
 }
 
 .desc {
@@ -41,17 +35,17 @@
 }
 
 .desc p {
-    margin: 20px 0 0 90px; /* Center the paragraph horizontally */
-    max-width: 400px; /* Limit the width of the paragraph for better readability */
+    margin: 20px 0 40px 90px; 
+    max-width: 400px; 
     font-size: 16px;
-    color: #D3D3D3;
+    color: #808080;
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .details {
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
+    justify-content: flex-start; 
     margin: 10px 70px;
 }
 
@@ -63,12 +57,73 @@
 .labels p, .values p {
     margin: 20px 20px;
     font-size: 16px;
-    color: #D3D3D3;
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .labels p strong {
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
+}
+
+/* Media Query for screen size 1024px */
+@media(max-width: 1024px){
+    .about-me h2{
+        font-size: 40px;
+        margin: 70px 0 50px 20px;
+    }
+
+    .aboutdiv{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .aboutdiv img{
+        width: 300px;
+        margin-right: 40px;
+    }
+
+    .desc{
+        margin-left: 20px;
+    }
+
+    .desc p{
+        margin: 20px 0 0 20px;
+    }
+
+    .details{
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+
+    .labels, .values{
+        align-items: flex-start;
+    }
+
+    .labels p, .values p{
+        margin: 10px 20px;
+    }
+}
+
+/* Media Query for screen size 768px */
+@media(max-width:768px){
+    .aboutdiv img{
+        display: none;
+    }
+
+    .about-me h2{
+        margin: 0 0 0 -20px;
+        padding: 0 0 50px 0;
+    }
+
+    .desc p{
+        margin: 20px 0 40px -20px;
+    }
+
+    .labels p, .values p{
+        margin: 0 0 0 -20px;
+        padding: 20px 20px 10px 0;
+    }
 }
