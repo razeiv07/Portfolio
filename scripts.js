@@ -157,6 +157,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const meters = document.querySelectorAll('.meter span');
+    meters.forEach(meter => {
+        meter.style.transition = 'width 1s ease-in-out';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contact-form');
+
+    contactForm.addEventListener('submit', event => {
+        event.preventDefault();
+        alert('Message sent successfully!');
+        contactForm.reset();
+    });
+});
 
 
 

@@ -1,4 +1,90 @@
-.hirediv{
-    background-color: pink;
-    height: 100vh;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.hire-me-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hire-me-section h1 {
+    margin-bottom: 20px;
+}
+
+.hire-me-section p {
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #76c7c0;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #60a9a6;
+}
+
+.bottom-navigation {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-details, .social-media {
+    text-align: center;
+}
+
+.contact-details p, .social-media p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
