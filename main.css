@@ -21,7 +21,7 @@ body{
 .maindiv {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background: #000;
 }
 
@@ -67,17 +67,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FFBD38;
+    color: #76c7c0;
 }
 
 .intro {
     margin-left: 15%;
-    margin-top: 10%;
+    margin-top: 300px;
 }
 
 .mainpara {
     font-size: 15px;
-    color: #FFBD38;
+    color: #00FFFF;
 }
 
 .titlepara {
@@ -88,7 +88,7 @@ nav ul li a:hover {
 }
 
 .titlepara span {
-    color: #FFBD38;
+    color: #00FFFF;
 }
 
 .description {
@@ -97,7 +97,7 @@ nav ul li a:hover {
 }
 
 .resume {
-    background: #FFBD38;
+    background: #00FFFF;
     color: #000;
     font-size: 11px;
     padding: 20px 20px;

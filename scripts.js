@@ -68,10 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
     const contentSections = document.querySelectorAll('.content-section');
+    const navbarHeight = document.querySelector('nav').offsetHeight;
 
     //Function to fetch and inject content from HTML file
     function fetchAndInjectContent(pageName, targetElementId) {
-        fetch(`html/${pageName}.html`)
+        const filePath = pageName === "home" ? "index.html" : `html/${pageName}.html`;
+        fetch(filePath)
             .then(response => response.text())
             .then(data => {
                 const targetElement = document.getElementById(targetElementId);
@@ -105,10 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // }
     function scrollToSection(element){
-        element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        const yOffset = -navbarHeight;
+        const yPosition = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: yPosition, behavior: 'smooth' })
+        // element.scrollIntoView({
+        //     behavior: 'smooth',
+        //     block: 'start'
+        // });
     }
 
         //Preload content for each section on page load
@@ -148,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Resume
 document.addEventListener('DOMContentLoaded', function() {
     const boxes = document.querySelectorAll('.resume-container .box');
     boxes.forEach(box => {
@@ -157,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//Skills
 document.addEventListener('DOMContentLoaded', () => {
     const meters = document.querySelectorAll('.meter span');
     meters.forEach(meter => {
@@ -164,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Hire Me
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('.contact-form');
 
