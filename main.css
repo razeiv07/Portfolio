@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /*new*/
     font-family: sans-serif;
 }
 
@@ -16,13 +17,18 @@ body{
     background-color: #000;
     width: 100%;
     z-index: 1000;
+   
 }
 
 .maindiv {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background: #000;
+    display: flex; /*new*/
+    justify-content: center; /*new*/
+    align-items: center; /*new*/
+    margin-top: 100px;
 }
 
 nav {
@@ -71,8 +77,12 @@ nav ul li a:hover {
 }
 
 .intro {
-    margin-left: 15%;
-    margin-top: 300px;
+    position: absolute; /*new*/
+    /* margin-left: 15%;
+    margin-top: 300px; */
+    top: 50%; /*new*/
+    left: 15%; /*new*/
+    transform: translateY(-50%); /*new*/
 }
 
 .mainpara {
@@ -121,6 +131,80 @@ nav ul li a:hover {
     border: 1px solid #fff;
 }
 
+/*Corner Text Styles*/
+.corner-text{
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+}
+
+.top-left{
+    top: 15%;
+    left: 18%;
+}
+
+.bottom-left{
+    bottom: 15%;
+    left: 18%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-left .years{
+    font-size: 42px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.bottom-left .experience{
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.top-right{
+    top: 15%;
+    right: 18%;
+}
+
+.bottom-right{
+    bottom: 15%;
+    right: 18%;
+}
+
+.bottom-right span{
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/*Image and Curve Styles*/
+.image-container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-curve{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.profile-image{
+    position: relative;
+    width: 60%;
+    height: auto;
+    z-index: 2;
+}
+
 /* .additional-content{
     background: #333;
     color: #fff;
@@ -167,8 +251,9 @@ nav ul li a:hover {
     }
 
     .intro {
-        margin-left: 10%;
-        margin-top: 20%;
+    /*  margin-left: 10%;
+        margin-top: 20%; */
+        left: 10%;
     }
 
     .titlepara {
@@ -216,8 +301,10 @@ nav ul li a:hover {
     }
 
     .intro {
-        margin-left: 15%;
-        margin-top: 30%;
+    /*    margin-left: 15%;
+        margin-top: 30%; */
+        left: 15%;
+        top: 30%;
     }
 
     .titlepara {
@@ -231,5 +318,14 @@ nav ul li a:hover {
     .intro a {
         font-size: 10px;
         padding: 15px 15px;
+    }
+
+    .image-curve{
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-image{
+        width: 60%;
     }
 }

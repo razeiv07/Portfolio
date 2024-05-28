@@ -130,6 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(`${targetId}-content`);
             if(targetElement){
                 scrollToSection(targetElement);
+              if(targetElement.id =="home-content"){
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
             }
 
             // //Fetch and inject content based on the clicked navigation item
@@ -174,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //Hire Me
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('.contact-form');
+
+    console.log("contactform", contactForm)
 
     contactForm.addEventListener('submit', event => {
         event.preventDefault();
