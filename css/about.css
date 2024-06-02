@@ -1,129 +1,54 @@
-.about-me-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.about-content{
     width: 100%;
-    background-color: #fff; 
-}
-
-.about-me h2 {
-    font-size: 50px;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 50px 0 60px 90px;
-}
-
-.aboutdiv {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    margin-top: -20px; 
-}
-
-.aboutdiv img {
-    width: 350px;
     height: auto;
-    border-radius: 20px;
-    margin-right: 20px;
-    right: 0;
+    padding-bottom: 20px;
+    padding-top: 100px;
 }
 
-.desc {
-    max-width: 100%;
-    margin-left: 20px;
+.profile-pic{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.desc p {
-    margin: 20px 0 40px 90px; 
-    max-width: 400px; 
-    font-size: 16px;
-    color: #808080;
-    line-height: 1.6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.skill-box{
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-size: 14px;
 }
 
-.details {
-    display: flex;
-    justify-content: flex-start; 
-    margin: 10px 70px;
+.custom-margin-row{
+    margin-top: 8%;
 }
 
-.labels, .values {
-    display: flex;
-    flex-direction: column;
-}
-
-.labels p, .values p {
-    margin: 20px 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-.labels p strong {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-/* Media Query for screen size 1024px */
 @media(max-width: 1024px){
-    .about-me h2{
-        font-size: 40px;
-        margin: 70px 0 50px 20px;
+    .about-content{
+        padding: 0 15px;
     }
 
-    .aboutdiv{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .aboutdiv img{
-        width: 300px;
-        margin-right: 40px;
-    }
-
-    .desc{
-        margin-left: 20px;
-    }
-
-    .desc p{
-        margin: 20px 0 0 20px;
-    }
-
-    .details{
-        flex-direction: row;
-        align-items: flex-start;
-        margin: 10px 0;
-    }
-
-    .labels, .values{
-        align-items: flex-start;
-    }
-
-    .labels p, .values p{
-        margin: 10px 20px;
+    .lead{
+        font-size: 1rem;
     }
 }
 
-/* Media Query for screen size 768px */
-@media(max-width:768px){
-    .aboutdiv img{
-        display: none;
+@media(max-width: 768px){
+    .profile-pic{
+        width: 120px;
+        height: 120px;
     }
 
-    .about-me h2{
-        margin: 0 0 0 -20px;
-        padding: 0 0 50px 0;
+    .skill-box{
+        width: calc(50% - 10px);
+        font-size: 12px;
+        text-align: center;
     }
 
-    .desc p{
-        margin: 20px 0 40px -20px;
-    }
-
-    .labels p, .values p{
-        margin: 0 0 0 -20px;
-        padding: 20px 20px 10px 0;
+    .lead{
+        font-size: 0.9rem;
     }
 }

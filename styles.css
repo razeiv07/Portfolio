@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+}
+
+.navbar-custom {
+    background: #ffffff !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+}
+
+.nav-link:hover {
+    color: #4b79a1;
+}
+
+.container-custom {
+    height: 90vh;
+    margin-top: 90px;
+}
+
+.content-custom {
+    margin-bottom: 20px;
+}
+
+.image-custom {
+    width: 60%;
+}
+
+.lead-custom {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    margin-bottom: -10px;
+}
+
+.display {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.btn-linkedin:hover {
+    color: #0e76a8;
+}
+
+.btn-github:hover {
+    color: #333;
+}
+
+.btn-twitter:hover {
+    color: #00acee;
+}
+
+/* For Screen size 1025px */
+/* @media(min-width: 1025px){
+    .hero-section{
+        padding-top: 80px;
+        
+    }
+    .content-custom{
+        padding-top: 30px;
+    }
+} */
+
+/* For Screen size between 768px and 1024px */
+@media(max-width: 1024px) {
+    .hero-section {
+        padding-top: 70px;
+    }
+
+    .content-custom {
+        padding-top: 30px;
+    }
+
+    .image-custom {
+        width: 50%;
+    }
+
+    .social-links {
+        position: relative;
+        bottom: 0;
+        flex-direction: row !important;
+        justify-content: center;
+    }
+}
+
+/*For Screen smaller than 768px*/
+@media(max-width: 768px) {
+    .collapse-custom {
+        text-align: right;
+    }
+
+    .hero-section .row {
+        flex-direction: column;
+    }
+
+    .content-custom {
+        padding-top: 20px;
+    }
+
+    .image-custom {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .lead-custom {
+        font-size: 20px;
+    }
+
+    .display {
+        font-size: 30px;
+    }
+
+    .leads {
+        font-size: 15px;
+    }
+
+    .social-links {
+        position: absolute;
+        bottom: 0;
+    }
+}
