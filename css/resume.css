@@ -1,4 +1,4 @@
-.resume{
+.resume {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-.resume-title{
+.resume-title {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -40,11 +40,7 @@
     border: 1px solid transparent;
 }
 
-h3{
-    text-align: center;
-}
-
-.tab.active{
+.tab.active {
     border-bottom: 2px solid #007bff;
     font-weight: bold;
 }
@@ -56,6 +52,8 @@ h3{
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto;
+    /*handle overflow*/
 }
 
 .content-section {
@@ -67,47 +65,185 @@ h3{
     display: block;
 }
 
-.job, .education {
+.job,
+.education {
     margin-bottom: 20px;
     position: relative;
     padding-left: 20px;
 }
 
-.job h3, .education h3 {
+.job h3,
+.education h3 {
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
 }
 
-.job h3 i, .education h3 i {
+.job h3 i,
+.education h3 i {
     margin-right: 10px;
 }
 
-.job p, .education p{
+.job p,
+.education p {
     margin-left: 40px;
 }
 
-.leads-custom{
-    font-weight: light;
+.leads-custom {
+    font-weight: 300;
     margin-left: 40px;
     font-size: 20px;
 }
 
-.address{
+.address {
     font-style: italic;
     font-size: 15px;
 }
 
-.responsibilities ul{
+.responsibilities ul {
     margin-left: 40px;
     list-style-type: disc;
     animation: fadeIn 1s ease-in-out;
 }
 
-.responsibilities ul li{
+.responsibilities ul li {
     margin-bottom: 10px;
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*For see more section*/
+/* .more-content{
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.see-more{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.see-more:hover{
+    text-decoration: none;
+}
+
+.see-more::before{
+    content: "\f055";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.see-more.collapsed::before{
+    transform: rotate(180deg);
+} */
+
+/*Media Query for responsiveness*/
+@media(max-width: 1024px) {
+    .resume {
+        padding-top: 60px;
+    }
+
+    .content-section {
+        width: 90%;
+    }
+
+    .leads-custom {
+        font-size: 18px;
+    }
+
+    .address {
+        font-size: 14px;
+    }
+
+    .job p,
+    .education p,
+    .responsibilities ul {
+        margin-left: 30px;
+    }
+
+    .responsibilities ul li {
+        margin-bottom: 8px;
+    }
+
+    .more-content{
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+
+    .see-more{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    .resume {
+        padding-top: 40px;
+    }
+
+    .content-section {
+        width: 95%;
+        margin-top: 100px;
+    }
+
+    .resume-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .tab {
+        padding: 8px 0;
+    }
+
+    .job h3, .education h3{
+        font-size: 1.2rem;
+    }
+
+    .leads-custom {
+        font-size: 16px;
+    }
+
+    .address {
+        font-size: 12px;
+    }
+
+    .job p,
+    .education p,
+    .responsibilities ul {
+        margin-left: 20px;
+    }
+
+    .responsibilities ul li {
+        margin-bottom: 6px;
+    }
+
+    .more-content{
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+
+    .see-more{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .job h3, .education h3{
+        font-size: 1rem;
+    }
 }

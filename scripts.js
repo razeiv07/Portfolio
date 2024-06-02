@@ -62,4 +62,23 @@ document.addEventListener("DOMContentLoaded", function () {
             downloadFrame.src = resumeUrl + '?download=1';
         });
     }
+
+    const seeMoreLinks = document.querySelectorAll('.see-more');
+
+    //For see more content of resume section
+    // seeMoreLinks.forEach(link => {
+    //     link.addEventListener('click', function (event) {
+    //         event.preventDefault();
+    //         const moreContent = this.previousElementSibling.querySelector('.more-content');
+    //         if(moreContent){
+    //             if(moreContent.style.display === "none" || moreContent.style.display === "") {
+    //                 moreContent.style.display = "block";
+    //                 this.classList.add("collapsed")
+    //             } else {
+    //                 moreContent.style.display = "none";
+    //                 this.classList.remove("collapsed");
+    //             }
+    //         }
+    //     });
+    // });
 });
