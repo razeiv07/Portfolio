@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/resume.css">
-    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <h1 class="resume">this is resume here</h1>
+    <div class="resume">
+        <h1 class="text-center mb-4">Resume</h1>
+        <div class="resume-container">
+            <div class="sidebar d-flex">
+                <button id="experienceBtn" class="btn btn-outline-primary mb-2">Experience</button>
+                <button id="educationBtn" class="btn btn-outline-primary">Education</button>
+            </div>
+            <div class="content d-flex justify-content-center">
+                <div id="experience" class="content-section active">
+                    <h2><i></i> Experience</h2>
+                    <div class="job">
+                        <h3><i class="bi bi-briefcase-fill"></i> iOS Developer</h3>
+                        <p><strong>Company:</strong> ABC Tech</p>
+                        <p><strong>Years:</strong> 2019-2022</p>
+                        <p><strong>Skills Gained:</strong> Swift, Objective-C, UIKit</p>
+                        <p><strong>Responsibilities:</strong> Developed and maintained iOS applications, collaborated
+                            with
+                            cross-functional teams, and ensured app performance.</p>
+                    </div>
+
+                    <div class="job">
+                        <h3><i class="bi bi-briefcase-fill"></i> iOS Developer</h3>
+                        <p><strong>Company:</strong> ABC Tech</p>
+                        <p><strong>Years:</strong> 2019-2022</p>
+                        <p><strong>Skills Gained:</strong> Swift, Objective-C, UIKit</p>
+                        <p><strong>Responsibilities:</strong> Developed and maintained iOS applications, collaborated
+                            with
+                            cross-functional teams, and ensured app performance.</p>
+                    </div>
+
+                </div>
+                <div id="education" class="content-section">
+                    <h2><i></i> Education</h2>
+                    <div class="education">
+                        <h3><i class="bi bi-mortarboard-fill"></i> Bachelor of Technology</h3>
+                        <p><strong>Institution:</strong> XYZ University</p>
+                        <p><strong>Years:</strong> 2015-2019</p>
+                        <p><strong>Skills Gained:</strong> Programming, Data Structures, Algorithms</p>
+                        <p><strong>Projects:</strong> Developed a mobile app for campus management.</p>
+                    </div>
+
+                    <div class="education">
+                        <h3><i class="bi bi-mortarboard-fill"></i> Bachelor of Technology</h3>
+                        <p><strong>Institution:</strong> XYZ University</p>
+                        <p><strong>Years:</strong> 2015-2019</p>
+                        <p><strong>Skills Gained:</strong> Programming, Data Structures, Algorithms</p>
+                        <p><strong>Projects:</strong> Developed a mobile app for campus management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
 </body>
+
 </html>

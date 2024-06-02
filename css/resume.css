@@ -3,3 +3,45 @@
     height: 90vh;
     padding-top: 80px;
 }
+
+.resume-container {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar .btn {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.job, .education {
+    margin-bottom: 20px;
+}
+
+.job h3, .education h3 {
+    display: flex;
+    align-items: center;
+}
+
+.job h3 i, .education h3 i {
+    margin-right: 10px;
+}
