@@ -1,32 +1,66 @@
 .resume{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.resume-title{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .resume-container {
     display: flex;
-}
-
-.sidebar {
-    flex: 0 0 150px;
-    display: flex;
     flex-direction: column;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
 }
 
-.sidebar .btn {
-    margin-bottom: 10px;
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    /* padding: 20px; */
+}
+
+.tab {
+    /* writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 20px;
     width: 100%;
+    text-align: center; */
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+h3{
+    text-align: center;
+}
+
+.tab.active{
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
 }
 
 .content {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .content-section {
     display: none;
+    width: 80%;
 }
 
 .content-section.active {
@@ -35,6 +69,8 @@
 
 .job, .education {
     margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
 }
 
 .job h3, .education h3 {
@@ -44,4 +80,34 @@
 
 .job h3 i, .education h3 i {
     margin-right: 10px;
+}
+
+.job p, .education p{
+    margin-left: 40px;
+}
+
+.leads-custom{
+    font-weight: light;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.address{
+    font-style: italic;
+    font-size: 15px;
+}
+
+.responsibilities ul{
+    margin-left: 40px;
+    list-style-type: disc;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.responsibilities ul li{
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }

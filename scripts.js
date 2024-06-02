@@ -1,5 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-    //Function to load content into a section
+    // Function to bind event listeners for the resume section
+    function bindResumeEventListeners() {
+        // Switch between experience and education
+        const experienceTab = document.getElementById('experienceTab');
+        const educationTab = document.getElementById('educationTab');
+        const experienceSection = document.getElementById('experience');
+        const educationSection = document.getElementById('education');
+
+        if (experienceTab && educationTab && experienceSection && educationSection) {
+            experienceTab.addEventListener('click', function () {
+                experienceSection.classList.add('active');
+                educationSection.classList.remove('active');
+                experienceTab.classList.add('active');
+                educationTab.classList.remove('active');
+            });
+
+            educationTab.addEventListener('click', function () {
+                educationSection.classList.add('active');
+                experienceSection.classList.remove('active');
+                educationTab.classList.add('active');
+                experienceTab.classList.remove('active');
+            });
+
+            // Set default active section
+            experienceSection.classList.add('active');
+            experienceTab.classList.add('active');
+        }
+    }
+
+    // Function to load content into a section
     function loadContent(sectionId, filePath) {
         fetch(filePath)
             .then(response => response.text())
@@ -17,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadContent('services', './html/services.html');
     loadContent('hire', './html/hire.html');
 
-    //Handle resume button click
+    // Handle resume button click
     const resumeButton = document.getElementById('resumeButton');
     if (resumeButton) {
         resumeButton.addEventListener('click', function (event) {
@@ -25,37 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const resumeUrl = "./resume/Rajeev_Sharma_CV.pdf";
 
-            //Open in a new tab
+            // Open in a new tab
             window.open(resumeUrl, '_blank');
 
-            //Trigger download
+            // Trigger download
             const downloadFrame = document.getElementById('downloadFrame');
             downloadFrame.src = resumeUrl + '?download=1';
         });
-    }
-
-    //Function to bind event listeners for the resume section
-    function bindResumeEventListeners() {
-
-        //Switch between experience and education
-        const experienceBtn = document.getElementById('experienceBtn');
-        const educationBtn = document.getElementById('educationBtn');
-        const experienceSection = document.getElementById('experience');
-        const educationSection = document.getElementById('education');
-
-        if (experienceBtn && educationBtn && experienceSection && educationSection) {
-            experienceBtn.addEventListener('click', function () {
-                experienceSection.classList.add('active');
-                educationSection.classList.remove('active');
-            });
-
-            educationBtn.addEventListener('click', function () {
-                educationSection.classList.add('active');
-                experienceSection.classList.remove('active');
-            });
-
-            // Set default active section
-            // experienceSection.classList.add('active');
-        }
     }
 });
