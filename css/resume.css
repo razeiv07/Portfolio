@@ -194,12 +194,19 @@
 
 @media(max-width: 768px) {
     .resume {
-        padding-top: 40px;
+        padding-top: 80px;
+    }
+
+    .content{
+        padding-top: 100px;
     }
 
     .content-section {
         width: 95%;
-        margin-top: 100px;
+    }
+
+    .experience-content{
+        padding-top: 100px;
     }
 
     .resume-title {

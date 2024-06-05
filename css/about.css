@@ -14,12 +14,25 @@
 
 .skill-box{
     display: inline-block;
+    align-items: center;
     padding: 10px 15px;
     margin: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f8f9fa;
     font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.skill-box i{
+    margin-right: 8px;
+}
+
+.skill-box:hover{
+    background-color: #e2e6ea;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
 }
 
 .custom-margin-row{
@@ -37,6 +50,10 @@
 }
 
 @media(max-width: 768px){
+    .about-content{
+        padding-top: 100px;
+    }
+
     .profile-pic{
         width: 120px;
         height: 120px;
