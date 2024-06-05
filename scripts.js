@@ -63,6 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //Function to close the navbar on small screens after a link is clicked
+    function closeNavbar() {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        if (navbarToggler && navbarCollapse.classList.contains('show')) {
+            bootstrap.Collapse.getInstance(navbarCollapse).hide();
+        };
+    };
+
+    //Bind click event to close navbar after link click
+    const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', closeNavbar);
+    });
+
     const seeMoreLinks = document.querySelectorAll('.see-more');
 
     //For see more content of resume section
