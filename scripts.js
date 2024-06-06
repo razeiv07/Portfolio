@@ -1,4 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // const pages = {
+    //     home: { name: "Home", link: "./index.html" },
+    //     about: { name: "About", link: "/html/about.html" },
+    //     resume: { name: "Resume", link: "/html/resume.html" },
+    //     services: { name: "Services", link: "/html/services.html" },
+    //     hire: { name: "Hire Me", link: "/html/hire.html" }
+    // };
+
+    // const currentPage = document.body.getAttribute("data-page");
+    // const navbarNav = document.querySelector('#navbarNav ul');
+
+    // if(navbarNav) {
+    //     navbarNav.innerHTML = "";
+
+    //     for (const [key, page] of Object.entries(pages)) {
+    //         if (key !== currentPage) {
+    //             const li = document.createElement('li');
+    //             li.classList.add('nav-item', 'px-3');
+
+    //             const a = document.createElement('a');
+    //             a.classList.add('nav-link');
+    //             a.href = page.link;
+    //             a.textContent = page.name;
+
+    //             li.appendChild(a);
+    //             navbarNav.appendChild(li);
+    //         }
+    //     }
+    // }
+
+    function loadContent(sectionId, filePath) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(sectionId).innerHTML = data;
+                if (sectionId === 'resume') {
+                    bindResumeEventListeners();
+                }
+
+                if (sectionId === 'about') {
+                    triggerAboutAnimations();
+                }
+            })
+            .catch(error => console.log('Error loading content:', error));
+    }
+
     // Function to bind event listeners for the resume section
     function bindResumeEventListeners() {
         // Switch between experience and education
@@ -29,18 +76,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to load content into a section
-    function loadContent(sectionId, filePath) {
-        fetch(filePath)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById(sectionId).innerHTML = data;
-                if (sectionId === 'resume') {
-                    bindResumeEventListeners();
-                }
-            })
-            .catch(error => console.log('Error loading content:', error));
+    // function loadContent(sectionId, filePath) {
+    //     fetch(filePath)
+    //         .then(response => response.text())
+    //         .then(data => {
+    //             document.getElementById(sectionId).innerHTML = data;
+    //             if (sectionId === 'resume') {
+    //                 bindResumeEventListeners();
+    //             }
+    //         })
+    //         .catch(error => console.log('Error loading content:', error));
+    // }
+
+    // // Function to add animation classes
+    function triggerAboutAnimations() {
+        const getToKnowElement = document.getElementById('get-to-know');
+        const mySkillsElement = document.getElementById('my-skills');
+
+        if (getToKnowElement && mySkillsElement) {
+            getToKnowElement.classList.remove('slide-in-left');
+            mySkillsElement.classList.remove('slide-in-right');
+
+            void getToKnowElement.offsetWidth;
+            void mySkillsElement.offsetWidth;
+
+            getToKnowElement.classList.add('slide-in-left');
+            mySkillsElement.classList.add('slide-in-right');
+        }
     }
 
+    //Function navigation to About Page in SPA content
+    function handleNavigation() {
+        const currentPage = document.body.getAttribute("data-page");
+        if(currentPage === 'about'){
+            triggerAboutAnimations();
+        }
+    }
+
+    //Load initial content
     loadContent('about', './html/about.html');
     loadContent('resume', './html/resume.html');
     loadContent('services', './html/services.html');
@@ -79,25 +152,9 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener('click', closeNavbar);
     });
 
+    handleNavigation();
+
     const seeMoreLinks = document.querySelectorAll('.see-more');
-
-    // // Function to add animation classes
-    // function addAnimations() {
-    //     const getToKnowElement = document.getElementById('get-to-know');
-    //     const mySkillsElement = document.getElementById('my-skills');
-        
-    //     // Remove animation classes to restart animations
-    //     getToKnowElement.classList.remove('slide-in-left');
-    //     mySkillsElement.classList.remove('slide-in-right');
-
-    //     // Trigger reflow to restart animation
-    //     void getToKnowElement.offsetWidth;
-    //     void mySkillsElement.offsetWidth;
-
-    //     // Add animation classes back
-    //     getToKnowElement.classList.add('slide-in-left');
-    //     mySkillsElement.classList.add('slide-in-right');
-    // }
 
     // // Call addAnimations on page load
     // addAnimations();
@@ -127,36 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // });
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const getToKnowElement = document.getElementById('get-to-know');
-//     const mySkillsElement = document.getElementById('my-skills');
 
-//     // Function to check if an element is in the viewport
-//     function isInViewport(element) {
-//         const rect = element.getBoundingClientRect();
-//         return (
-//             rect.top >= 0 &&
-//             rect.left >= 0 &&
-//             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//         );
-//     }
 
-//     // Function to add animation classes when elements are in the viewport
-//     function addAnimations() {
-//         if (isInViewport(getToKnowElement)) {
-//             getToKnowElement.classList.add('slide-in-left');
-//             window.removeEventListener('scroll', addAnimations); // Remove scroll event listener once animation is triggered
-//         }
-//         if (isInViewport(mySkillsElement)) {
-//             mySkillsElement.classList.add('slide-in-right');
-//             window.removeEventListener('scroll', addAnimations); // Remove scroll event listener once animation is triggered
-//         }
-//     }
-
-//     // Call addAnimations when the page is scrolled
-//     window.addEventListener('scroll', addAnimations);
-// });
 
 
 
