@@ -1,15 +1,14 @@
 .hire-container {
     width: 100%;
     height: 80vh;
-    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.header-container{
+.header-container-hire{
     width: 100%;
-    background-color: #76c7c0;
+    background: linear-gradient(to right, #2c3e50, #4ca1af, #6b8396);
     color: #fff;
     text-align: center;
 }

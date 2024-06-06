@@ -81,6 +81,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const seeMoreLinks = document.querySelectorAll('.see-more');
 
+    // // Function to add animation classes
+    // function addAnimations() {
+    //     const getToKnowElement = document.getElementById('get-to-know');
+    //     const mySkillsElement = document.getElementById('my-skills');
+        
+    //     // Remove animation classes to restart animations
+    //     getToKnowElement.classList.remove('slide-in-left');
+    //     mySkillsElement.classList.remove('slide-in-right');
+
+    //     // Trigger reflow to restart animation
+    //     void getToKnowElement.offsetWidth;
+    //     void mySkillsElement.offsetWidth;
+
+    //     // Add animation classes back
+    //     getToKnowElement.classList.add('slide-in-left');
+    //     mySkillsElement.classList.add('slide-in-right');
+    // }
+
+    // // Call addAnimations on page load
+    // addAnimations();
+
+    // // Re-trigger animations on visibility change
+    // document.addEventListener("pageshow", function(event) {
+    //     if (event.persisted) {
+    //         addAnimations();
+    //     }
+    // });
+
     //For see more content of resume section
     // seeMoreLinks.forEach(link => {
     //     link.addEventListener('click', function (event) {
@@ -98,3 +126,40 @@ document.addEventListener("DOMContentLoaded", function () {
     //     });
     // });
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const getToKnowElement = document.getElementById('get-to-know');
+//     const mySkillsElement = document.getElementById('my-skills');
+
+//     // Function to check if an element is in the viewport
+//     function isInViewport(element) {
+//         const rect = element.getBoundingClientRect();
+//         return (
+//             rect.top >= 0 &&
+//             rect.left >= 0 &&
+//             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//         );
+//     }
+
+//     // Function to add animation classes when elements are in the viewport
+//     function addAnimations() {
+//         if (isInViewport(getToKnowElement)) {
+//             getToKnowElement.classList.add('slide-in-left');
+//             window.removeEventListener('scroll', addAnimations); // Remove scroll event listener once animation is triggered
+//         }
+//         if (isInViewport(mySkillsElement)) {
+//             mySkillsElement.classList.add('slide-in-right');
+//             window.removeEventListener('scroll', addAnimations); // Remove scroll event listener once animation is triggered
+//         }
+//     }
+
+//     // Call addAnimations when the page is scrolled
+//     window.addEventListener('scroll', addAnimations);
+// });
+
+
+
+
+
+

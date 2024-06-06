@@ -1,8 +1,19 @@
 .about-content{
     width: 100%;
     height: auto;
-    padding-bottom: 20px;
     padding-top: 100px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    overflow: hidden;
+}
+
+.header-container-about{
+    width: 100%;
+    background: linear-gradient(to right, #2c3e50, #4ca1af, #6b8396);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 20px;
 }
 
 .profile-pic{
@@ -23,6 +34,7 @@
     font-size: 14px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    color: #333;
 }
 
 .skill-box i{
@@ -39,6 +51,44 @@
     margin-top: 8%;
 }
 
+.animated{
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.slide-in-left{
+    animation-name: slideInLeft;
+}
+
+.slide-in-right{
+    animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    } 
+}
+
+@keyframes slideInRight {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    } 
+}
+
 @media(max-width: 1024px){
     .about-content{
         padding: 0 15px;
@@ -46,6 +96,22 @@
 
     .lead{
         font-size: 1rem;
+    }
+
+    .skill-box{
+        font-size: 12px;
+    }
+
+    .about-content h1{
+        font-size: 1.5rem;
+    }
+
+    .text-start h2{
+        font-size: 1.25rem;
+    }
+
+    p{
+        font-size: 0.9rem;
     }
 }
 
@@ -66,6 +132,40 @@
     }
 
     .lead{
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    h1{
+        font-size: 1.25rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 576px){
+    .lead{
+        font-size: 0.75rem;
+    }
+
+    .skill-box{
+        font-size: 10px;
+    }
+
+    h1{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 0.875rem;
+    }
+
+    p{
+        font-size: 0.75rem;
     }
 }
