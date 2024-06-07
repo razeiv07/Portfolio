@@ -71,8 +71,7 @@ footer{
 
 @media(max-width: 1024px){
     .hire-container{
-        padding-top: 30px;
-        min-height: auto;
+        height: auto;
     }
 
     .contact-info p{
@@ -86,8 +85,7 @@ footer{
 
 @media(max-width: 768px) {
     .hire-container{
-        
-        height: auto;
+        margin-top: 0px;
     }
 
     .row{
