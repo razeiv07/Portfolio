@@ -69,15 +69,34 @@ footer{
     width: 100%;
 }
 
+.btn-submit{
+    background-color: #4ca1af;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover{
+    background-color: #203a43;
+    color: #fff;
+}
+
 @media(max-width: 1024px){
     .hire-container{
         height: auto;
         margin-top: 30px;
-        min-height: auto;
     }
 
     .contact-info p{
         font-size: 1em;
+    }
+
+    .btn-submit{
+        font-size: 1rem;
     }
 
     .footer{
@@ -101,6 +120,10 @@ footer{
     .contact-info{
         padding: 0 20px;
         text-align: left;
+    }
+
+    .btn-submit{
+        font-size: 0.9rem;
     }
 }
 
